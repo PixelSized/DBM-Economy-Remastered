@@ -1,0 +1,335 @@
+{
+  "name": "coinflip",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "hKmWe",
+  "actions": [
+    {
+      "comment": "©All rights reserved Blue Label#6215",
+      "color": "#00ffff",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "amount",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "kind",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "amount",
+      "comparison": "3",
+      "value": "299",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**ERROR:** The minimum coinflip's gamble amount is 300 cash.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "amount",
+      "comparison": "5",
+      "value": "'.'",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**ERROR:** You must to type a valid number.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "3",
+      "value": "tempVars(\"amount\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**ERROR:** You don't have enough cash.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "kind",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Wrong Format:**\n[p]coinflip <amount> <heads|tails>",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "kind",
+      "comparison": "1",
+      "value": "\"heads\"",
+      "iftrue": "3",
+      "iftrueVal": "3",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "kind",
+      "comparison": "1",
+      "value": "\"tails\"",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Wrong Format:**\n[p]coinflip <amount> <heads|tails>",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "",
+      "author": "Coinflip",
+      "color": "",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "https://bitcoin.org/img/icons/opengraph.png?1557691559",
+      "imageUrl": "",
+      "thumbUrl": "https://cdn.dribbble.com/users/58530/screenshots/2323771/coin-flip.gif",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Requested by: ${member.displayName}",
+      "footerIcon": "${msg.author.displayAvatarURL}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Bet Amount",
+      "message": "${tempVars(\"amount\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "min": "1",
+      "max": "2",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "9",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "You chose **${tempVars(\"kind\")}**.\nResult: **Heads**",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "kind",
+      "comparison": "1",
+      "value": "\"heads\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Result",
+      "message": "Winner!",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "Number(tempVars(\"amount\"))",
+      "name": "Control Member Data"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Result",
+      "message": "Lost!",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "Number(-tempVars(\"amount\"))",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "You chose **${tempVars(\"kind\")}**.\nResult: **Tails**",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "kind",
+      "comparison": "1",
+      "value": "\"tails\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Result",
+      "message": "Winner!",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "Number(tempVars(\"amount\"))",
+      "name": "Control Member Data"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Result",
+      "message": "Lost!",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "Number(-tempVars(\"amount\"))",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_aliases": [
+    "cf"
+  ]
+}

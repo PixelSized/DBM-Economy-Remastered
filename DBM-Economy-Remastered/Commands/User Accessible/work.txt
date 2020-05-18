@@ -1,0 +1,164 @@
+{
+  "name": "work",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "qhZdJ",
+  "actions": [
+    {
+      "storage": "1",
+      "varName": "work-list",
+      "name": "Create List"
+    },
+    {
+      "storage": "1",
+      "varName": "work-list",
+      "addType": "0",
+      "position": "",
+      "value": "\"Bodyguard\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work-list",
+      "addType": "0",
+      "position": "",
+      "value": "\"Pizza Delivery Guy\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work-list",
+      "addType": "0",
+      "position": "",
+      "value": "\"Personal Assistant\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work-list",
+      "addType": "0",
+      "position": "",
+      "value": "\"Customer Service Representative\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work-list",
+      "addType": "0",
+      "position": "",
+      "value": "\"Photo Designer\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "hourly-wage",
+      "min": "25",
+      "max": "200",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "bonus",
+      "min": "50",
+      "max": "150",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "hours",
+      "min": "1",
+      "max": "12",
+      "name": "Generate Random Number"
+    },
+    {
+      "list": "7",
+      "varName": "work-list",
+      "getType": "2",
+      "position": "",
+      "storage": "1",
+      "varName2": "work",
+      "name": "Get Item from List"
+    },
+    {
+      "title": "Paycheck",
+      "author": "Work Manager",
+      "color": "RANDOM",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "https://cdn3.iconfinder.com/data/icons/digital-marketing-3-1/512/149-512.png",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "work-embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "work-embed",
+      "message": "Hi ${member.displayName},\nYou worked as **${tempVars(\"work\")}**.\nYou worked for **${tempVars(\"hourly-wage\")}$** an hour and you worked a total **${tempVars(\"hours\")}** hours.\nTake a break from work for **2** minutes.",
+      "name": "Set Embed Description"
+    },
+    {
+      "FirstNumber": "${tempVars(\"hourly-wage\")}",
+      "info": "2",
+      "SecondNumber": "${tempVars(\"hours\")}",
+      "storage": "1",
+      "varName": "wage",
+      "name": "Basic Math Operation"
+    },
+    {
+      "storage": "1",
+      "varName": "work-embed",
+      "fieldName": "Wage",
+      "message": "${tempVars(\"wage\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "work-embed",
+      "fieldName": "Bonus",
+      "message": "${tempVars(\"bonus\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "work-embed",
+      "fieldName": "Total Cash",
+      "message": "${tempVars(\"wage\")+tempVars(\"bonus\")} Cash",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "work-embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "FirstNumber": "${tempVars(\"bonus\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"wage\")}",
+      "storage": "1",
+      "varName": "earned",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "tempVars(\"wage\")",
+      "name": "Control Member Data"
+    }
+  ],
+  "_timeRestriction": 120,
+  "comType": "0"
+}

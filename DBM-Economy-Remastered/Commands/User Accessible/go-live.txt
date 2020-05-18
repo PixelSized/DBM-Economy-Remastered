@@ -1,0 +1,181 @@
+{
+  "name": "go-live",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "ULVnT",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "member-cash",
+      "name": "Store Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "dares",
+      "min": "1",
+      "max": "50",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "hours",
+      "min": "1",
+      "max": "5",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "money",
+      "min": "1000",
+      "max": "10000",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "viewers",
+      "min": "2",
+      "max": "1000",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "bails",
+      "min": "0",
+      "max": "20",
+      "name": "Generate Random Number"
+    },
+    {
+      "FirstNumber": "${tempVars(\"dares\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"hours\")}",
+      "storage": "1",
+      "varName": "h+d",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "${tempVars(\"h+d\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"money\")}",
+      "storage": "1",
+      "varName": "hxd+m",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "${tempVars(\"hxd+m\")}",
+      "info": "2",
+      "SecondNumber": "2",
+      "storage": "1",
+      "varName": "hxd+mx3",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "tempVars(\"hxd+mx3\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "new-cash",
+      "name": "Store Member Data"
+    },
+    {
+      "title": "YOU WENT LIVE ON TWITCH...",
+      "author": "",
+      "color": "PURPLE",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "",
+      "message": "Here is your Live Stream Statistics...",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "",
+      "fieldName": "Hours Streamed For:",
+      "message": "${tempVars(\"hours\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "",
+      "fieldName": "Peak Viewers:",
+      "message": "${tempVars(\"viewers\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "",
+      "fieldName": "Completed Dares:",
+      "message": "${tempVars(\"dares\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "",
+      "fieldName": "Donations:",
+      "message": "${tempVars(\"bails\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "",
+      "fieldName": "Money earned:",
+      "message": "${tempVars(\"hxd+mx3\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "",
+      "message": "Total money: $ ${tempVars(\"new-cash\")}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_timeRestriction": 3600
+}

@@ -1,0 +1,586 @@
+{
+  "name": "slots",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "tueDJ",
+  "actions": [
+    {
+      "comment": "©All rights reserved Blue Label#6215",
+      "color": "#00ffff",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "play",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**ERROR:**\nSlot Machine already running for you.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "amount",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "amount",
+      "comparison": "0",
+      "value": "299",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "58",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Wrong Format:**\n[p]slots <Amount>",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "amount",
+      "comparison": "5",
+      "value": "'.'",
+      "iftrue": "0",
+      "iftrueVal": "60",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**ERROR:**\nThe number must to be fully number, without '.'.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "amount",
+      "comparison": "4",
+      "value": "299",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "62",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**ERROR:**\nThe amount minimum is 300 cash.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "1",
+      "value": "tempVars(\"amount\")",
+      "iftrue": "3",
+      "iftrueVal": "3",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "tempVars(\"amount\")",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "64",
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**ERROR:**\nYou Don't have this amount of cash.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "list",
+      "name": "Create List"
+    },
+    {
+      "storage": "1",
+      "varName": "list",
+      "addType": "0",
+      "position": "",
+      "value": "\":banana:\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "list",
+      "addType": "0",
+      "position": "",
+      "value": "\":strawberry:\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "list",
+      "addType": "0",
+      "position": "",
+      "value": "\":tomato:\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "list",
+      "addType": "0",
+      "position": "",
+      "value": "\":apple:\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "list",
+      "addType": "0",
+      "position": "",
+      "value": "\":eggplant:\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "list",
+      "addType": "0",
+      "position": "",
+      "value": "\":grapes:\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "list",
+      "addType": "0",
+      "position": "",
+      "value": "\":watermelon:\"",
+      "name": "Add Item to List"
+    },
+    {
+      "title": "Slot Machine will start in 3 seconds.",
+      "author": "",
+      "color": "",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "begin",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "begin",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "1",
+      "varName3": "begin-embed",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "time",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "result-after",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "play",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "member-cash",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"member-cash\")}",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"amount\")}",
+      "storage": "1",
+      "varName": "cash-set",
+      "name": "Basic Math Operation"
+    },
+    {
+      "storage": "1",
+      "varName": "Result",
+      "changeType": "0",
+      "value": "\"Lost!\"",
+      "name": "Control Variable"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "list": "7",
+      "varName": "list",
+      "getType": "2",
+      "position": "",
+      "storage": "1",
+      "varName2": "item-1",
+      "name": "Get Item from List"
+    },
+    {
+      "list": "7",
+      "varName": "list",
+      "getType": "2",
+      "position": "",
+      "storage": "1",
+      "varName2": "item-2",
+      "name": "Get Item from List"
+    },
+    {
+      "list": "7",
+      "varName": "list",
+      "getType": "2",
+      "position": "",
+      "storage": "1",
+      "varName2": "item-3",
+      "name": "Get Item from List"
+    },
+    {
+      "storage": "1",
+      "varName": "time",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "3",
+      "iffalse": "0",
+      "iffalseVal": "17",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "time",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "3",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "19",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "time",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "3",
+      "iftrueVal": "5",
+      "iffalse": "3",
+      "iffalseVal": "9",
+      "name": "Check Variable"
+    },
+    {
+      "count": "5",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "time",
+      "changeType": "0",
+      "value": "2",
+      "name": "Control Variable"
+    },
+    {
+      "count": "3",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "time",
+      "changeType": "0",
+      "value": "3",
+      "name": "Control Variable"
+    },
+    {
+      "count": "1",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "time",
+      "changeType": "0",
+      "value": "4",
+      "name": "Control Variable"
+    },
+    {
+      "title": "Slot Machine",
+      "author": "Slot Machine",
+      "color": "",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "https://static.thenounproject.com/png/117645-200.png",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "hey",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "hey",
+      "message": "Rolling...\n\n${tempVars(\"item-1\")} | ${tempVars(\"item-2\")} | ${tempVars(\"item-3\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "begin-embed",
+      "storage2": "1",
+      "varName2": "hey",
+      "name": "Edit Embed"
+    },
+    {
+      "storage": "1",
+      "varName": "time",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "0",
+      "iftrueVal": "29",
+      "iffalse": "2",
+      "iffalseVal": "35",
+      "name": "Check Variable"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "item-1",
+      "comparison": "1",
+      "value": "tempVars(\"item-2\")",
+      "iftrue": "3",
+      "iftrueVal": "1",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "item-2",
+      "comparison": "1",
+      "value": "tempVars(\"item-3\")",
+      "iftrue": "0",
+      "iftrueVal": "1",
+      "iffalse": "2",
+      "iffalseVal": "64",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Result",
+      "changeType": "0",
+      "value": "\"Half Winner!\"",
+      "name": "Control Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "slot-win",
+      "changeType": "1",
+      "value": "parseInt(1)",
+      "name": "Control Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"amount\")}",
+      "info": "2",
+      "SecondNumber": "3",
+      "storage": "1",
+      "varName": "result-after",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "${tempVars(\"member-cash\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"result-after\")}",
+      "storage": "1",
+      "varName": "cash-set",
+      "name": "Basic Math Operation"
+    },
+    {
+      "storage": "1",
+      "varName": "item-1",
+      "comparison": "1",
+      "value": "tempVars(\"item-3\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "4",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Result",
+      "changeType": "0",
+      "value": "\"Winner!\"",
+      "name": "Control Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "slot-win",
+      "changeType": "1",
+      "value": "parseInt(1)",
+      "name": "Control Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"amount\")}",
+      "info": "2",
+      "SecondNumber": "10",
+      "storage": "1",
+      "varName": "result-after",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "${tempVars(\"member-cash\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"result-after\")}",
+      "storage": "1",
+      "varName": "cash-set",
+      "name": "Basic Math Operation"
+    },
+    {
+      "storage": "1",
+      "varName": "hey",
+      "message": "SlotMachine Ended...\n\n${tempVars(\"item-1\")} | ${tempVars(\"item-2\")} | ${tempVars(\"item-3\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "hey",
+      "fieldName": "Amount Gambled",
+      "message": "${tempVars(\"amount\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "hey",
+      "fieldName": "Prize",
+      "message": "${Math.floor(tempVars(\"result-after\"))}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "hey",
+      "fieldName": "Result",
+      "message": "${tempVars(\"Result\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "hey",
+      "message": "Requested By: ${member.displayName}",
+      "footerIcon": "${msg.author.displayAvatarURL}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "begin-embed",
+      "storage2": "1",
+      "varName2": "hey",
+      "name": "Edit Embed"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "0",
+      "value": "tempVars(\"cash-set\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "play",
+      "changeType": "0",
+      "value": "parseInt(0)",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "total-slot",
+      "changeType": "1",
+      "value": "parseInt(1)",
+      "name": "Control Member Data"
+    }
+  ]
+}

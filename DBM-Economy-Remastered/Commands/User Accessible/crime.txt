@@ -1,0 +1,202 @@
+{
+  "name": "crime",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "uqRqX",
+  "actions": [
+    {
+      "storage": "1",
+      "varName": "catch-rate",
+      "min": "0",
+      "max": "10",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "work-list",
+      "name": "Create List"
+    },
+    {
+      "storage": "1",
+      "varName": "work-list",
+      "addType": "0",
+      "position": "",
+      "value": "\"Hitman\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work-list",
+      "addType": "0",
+      "position": "",
+      "value": "\"Drug Transporter\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work-list",
+      "addType": "0",
+      "position": "",
+      "value": "\"Insider\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work-list",
+      "addType": "0",
+      "position": "",
+      "value": "\"Black Hat Hacker\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work-list",
+      "addType": "0",
+      "position": "",
+      "value": "\"Pimp\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "catch-rate",
+      "comparison": "13",
+      "value": "7",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "23",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "hourly-wage",
+      "min": "25",
+      "max": "800",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "bonus",
+      "min": "0",
+      "max": "100",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "hours",
+      "min": "1",
+      "max": "12",
+      "name": "Generate Random Number"
+    },
+    {
+      "list": "7",
+      "varName": "work-list",
+      "getType": "2",
+      "position": "",
+      "storage": "1",
+      "varName2": "work",
+      "name": "Get Item from List"
+    },
+    {
+      "title": "Paycheck",
+      "author": "Work Manager",
+      "color": "RANDOM",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "https://cdn3.iconfinder.com/data/icons/digital-marketing-3-1/512/149-512.png",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "work-embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "work-embed",
+      "message": "Hi ${member.displayName},\nYou worked as a **${tempVars(\"work\")}**.\nYou worked for **${tempVars(\"hourly-wage\")}$** an hour and you worked a total **${tempVars(\"hours\")}** hours.\nTake a break from work for **30** seconds.",
+      "name": "Set Embed Description"
+    },
+    {
+      "FirstNumber": "${tempVars(\"hourly-wage\")}",
+      "info": "2",
+      "SecondNumber": "${tempVars(\"hours\")}",
+      "storage": "1",
+      "varName": "wage",
+      "name": "Basic Math Operation"
+    },
+    {
+      "storage": "1",
+      "varName": "work-embed",
+      "fieldName": "Wage",
+      "message": "${tempVars(\"wage\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "work-embed",
+      "fieldName": "Bonus",
+      "message": "${tempVars(\"bonus\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "work-embed",
+      "fieldName": "Total Cash",
+      "message": "${tempVars(\"wage\")+tempVars(\"bonus\")} Cash",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "work-embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "FirstNumber": "${tempVars(\"wage\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"bonus\")}",
+      "storage": "1",
+      "varName": "earned",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "tempVars(\"earned\")",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member.displayName}, You were caught doing illegal activities, you have been fined $10,000",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-10000",
+      "name": "Control Member Data"
+    }
+  ],
+  "_timeRestriction": 30
+}

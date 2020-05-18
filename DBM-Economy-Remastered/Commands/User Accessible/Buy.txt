@@ -1,0 +1,916 @@
+{
+  "name": "buy",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "Pjjjn",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "buying",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "18",
+      "name": "Check Parameters"
+    },
+    {
+      "storage": "1",
+      "varName": "buying",
+      "comparison": "1",
+      "value": "Premium",
+      "iftrue": "2",
+      "iftrueVal": "39",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "buying",
+      "comparison": "1",
+      "value": "DJ",
+      "iftrue": "2",
+      "iftrueVal": "45",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "buying",
+      "comparison": "1",
+      "value": "Knight",
+      "iftrue": "2",
+      "iftrueVal": "51",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "buying",
+      "comparison": "1",
+      "value": "White",
+      "iftrue": "2",
+      "iftrueVal": "57",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "buying",
+      "comparison": "1",
+      "value": "Black",
+      "iftrue": "2",
+      "iftrueVal": "63",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "buying",
+      "comparison": "1",
+      "value": "Red",
+      "iftrue": "2",
+      "iftrueVal": "69",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "buying",
+      "comparison": "1",
+      "value": "Orange",
+      "iftrue": "2",
+      "iftrueVal": "75",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "buying",
+      "comparison": "1",
+      "value": "Blue",
+      "iftrue": "2",
+      "iftrueVal": "81",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "buying",
+      "comparison": "1",
+      "value": "Green",
+      "iftrue": "2",
+      "iftrueVal": "87",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "buying",
+      "comparison": "1",
+      "value": "Yellow",
+      "iftrue": "2",
+      "iftrueVal": "93",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "buying",
+      "comparison": "1",
+      "value": "Pink",
+      "iftrue": "2",
+      "iftrueVal": "99",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "buying",
+      "comparison": "1",
+      "value": "Brown",
+      "iftrue": "2",
+      "iftrueVal": "105",
+      "iffalse": "2",
+      "iffalseVal": "16",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "I do not have that in the store!\nMake it quick...\n\n(Orders are command sensitive...)",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "The Black Market",
+      "author": "NOBL3 Seller",
+      "color": "BLACK",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "https://cdn.discordapp.com/attachments/701723846440648714/702768817029513256/blackmarket-squarelogo-1429251829765.png",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "bm-embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "message": "Psst...\n\n**Heres what i got on offer..**",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "Premium",
+      "message": "$1,500,000",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "",
+      "message": "",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "DJ",
+      "message": "$1,250,000",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "",
+      "message": "",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "",
+      "message": "**COLOURED ROLES:**",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "White",
+      "message": "$750k\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "Black",
+      "message": "$750k\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "Red",
+      "message": "$600k\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "Orange",
+      "message": "$600k\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "Blue",
+      "message": "$600k\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "Green",
+      "message": "$600k\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "Yellow",
+      "message": "$600k\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "Pink",
+      "message": "$600k\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "Brown",
+      "message": "$400k\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "fieldName": "",
+      "message": "CUSTOM COLOUR ROLE: $1,000,000\n(DM ADMINS)\n",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bm-embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Insufficient funds...\n**Stop playing around!**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "1499999",
+      "iftrue": "0",
+      "iftrueVal": "3",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-1500000",
+      "name": "Control Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"buying\")}",
+      "storage": "1",
+      "varName": "buying-role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "buying-role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Here you go, please doing business with you...\n\n`You have bought Premium role...`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "1249999",
+      "iftrue": "0",
+      "iftrueVal": "3",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-1250000",
+      "name": "Control Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"buying\")}",
+      "storage": "1",
+      "varName": "buying-role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "buying-role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Here you go, please doing business with you...\n\n`You have bought DJ role...`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "799999",
+      "iftrue": "0",
+      "iftrueVal": "3",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-800000",
+      "name": "Control Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"buying\")}",
+      "storage": "1",
+      "varName": "buying-role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "buying-role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Here you go, please doing business with you...\n\n`You have bought Knight role...`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "749999",
+      "iftrue": "0",
+      "iftrueVal": "3",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-750000",
+      "name": "Control Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"buying\")}",
+      "storage": "1",
+      "varName": "buying-role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "buying-role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Here you go, please doing business with you...\n\n`You have bought White role...`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "749999",
+      "iftrue": "0",
+      "iftrueVal": "3",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-750000",
+      "name": "Control Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"buying\")}",
+      "storage": "1",
+      "varName": "buying-role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "buying-role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Here you go, please doing business with you...\n\n`You have bought Black role...`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "599999",
+      "iftrue": "0",
+      "iftrueVal": "3",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-600000",
+      "name": "Control Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"buying\")}",
+      "storage": "1",
+      "varName": "buying-role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "buying-role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Here you go, please doing business with you...\n\n`You have bought Red role...`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "599999",
+      "iftrue": "0",
+      "iftrueVal": "3",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-600000",
+      "name": "Control Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"buying\")}",
+      "storage": "1",
+      "varName": "buying-role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "buying-role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Here you go, please doing business with you...\n\n`You have bought Orange role...`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "599999",
+      "iftrue": "0",
+      "iftrueVal": "3",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-600000",
+      "name": "Control Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"buying\")}",
+      "storage": "1",
+      "varName": "buying-role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "buying-role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Here you go, please doing business with you...\n\n`You have bought Blue role...`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "599999",
+      "iftrue": "0",
+      "iftrueVal": "3",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-600000",
+      "name": "Control Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"buying\")}",
+      "storage": "1",
+      "varName": "buying-role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "buying-role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Here you go, please doing business with you...\n\n`You have bought Green role...`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "599999",
+      "iftrue": "0",
+      "iftrueVal": "3",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-600000",
+      "name": "Control Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"buying\")}",
+      "storage": "1",
+      "varName": "buying-role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "buying-role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Here you go, please doing business with you...\n\n`You have bought Yellow role...`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "599999",
+      "iftrue": "0",
+      "iftrueVal": "3",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-600000",
+      "name": "Control Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"buying\")}",
+      "storage": "1",
+      "varName": "buying-role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "buying-role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Here you go, please doing business with you...\n\n`You have bought Pink role...`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "comparison": "4",
+      "value": "399999",
+      "iftrue": "0",
+      "iftrueVal": "3",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "changeType": "1",
+      "value": "-400000",
+      "name": "Control Member Data"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"buying\")}",
+      "storage": "1",
+      "varName": "buying-role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "buying-role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Rightt, here you go, dont know why anyone would buy this but pleasure doing business with you...\n\n`You have bought Brown role...`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "_aliases": [
+    "store"
+  ]
+}

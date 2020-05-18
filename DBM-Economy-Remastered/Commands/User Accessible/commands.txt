@@ -1,0 +1,48 @@
+{
+  "name": "commands",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "gBMCn",
+  "actions": [
+    {
+      "title": "ECONOMY COMMANDS",
+      "author": "",
+      "color": "GREEN",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "",
+      "message": "> Bank\n\n**!Transfer**     Transfer X Amount from your account to someone elses\n\n**!Deposit**      Deposit X Amount from your account into the bank\n\n**!Withdraw**     Withdraw X Amount from the bank back into your account\n\n**!Cash**         Shows your Cash stats\n\n\n\n> Casino\n\n**!Gamble**       Gamble X amount and try to triple your money\n\n**!Slots**        Start a slots machine\n\n**!Coinflip**     flip a coin\n\n**!Slotstats**    see a users luck with slots\n\n\n\n> Income\n\n**!Work**         Work your ass off trying to make money...\n\n**!Go-Live**      Live the N3RVE Experience and go live...\n\n**!Slut**         Work as a slut to earn an income...\n\n**!Crime**        Commit a crime for a chance to earn some money...\n\n\n\n> Dark Net\n\n**!Thief**        Pay a thief 10k to try to steal from someone\n\n**!Cashboard**    Shows top 10 users with the most AVAILABLE cash\n\n**!Bankboard**    Shows top 10 users with the most banked cash\n\n**!Buy**          Call the blackmarket up.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}

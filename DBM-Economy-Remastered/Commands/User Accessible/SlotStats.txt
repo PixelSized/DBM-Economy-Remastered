@@ -1,0 +1,291 @@
+{
+  "name": "slotstats",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "LoEqw",
+  "actions": [
+    {
+      "comment": "©All rights reserved Blue Label#6215",
+      "color": "#00ffff",
+      "name": "Comment"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "total-slot",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "mentionedtotal",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "slot-win",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "mentionedwin",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "total-slot",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "membertotal",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "slot-win",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "memberwin",
+      "name": "Store Member Data"
+    },
+    {
+      "condition": "1",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "27",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Error: I can't find this member.\nIf you mentioned two members, please mention one.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "22",
+      "name": "Check Parameters"
+    },
+    {
+      "title": "${member.displayName}'s SlotMachine Stats",
+      "author": "Slot Machine",
+      "color": "RANDOM",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "https://static.thenounproject.com/png/117645-200.png",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Total Slot",
+      "message": "${tempVars(\"membertotal\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Wins Counter",
+      "message": "${tempVars(\"memberwin\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "FirstNumber": "${tempVars(\"memberwin\")}",
+      "info": "3",
+      "SecondNumber": "${tempVars(\"membertotal\")}",
+      "storage": "1",
+      "varName": "percent",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "${tempVars(\"percent\")}",
+      "info": "2",
+      "SecondNumber": "100",
+      "storage": "1",
+      "varName": "memberpercent",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "total-slot",
+      "comparison": "1",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "1",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Win Percent",
+      "message": "0%\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "count": "1",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Win Percent",
+      "message": "${Math.floor(tempVars(\"memberpercent\"))}%",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "message": "Requested By: ${member.displayName}",
+      "footerIcon": "${msg.author.displayAvatarURL}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Mention Money",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "MentionName",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "MentionUrl",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "${tempVars(\"MentionName\")}'s SlotMachine Stats",
+      "author": "Slot Machine",
+      "color": "RANDOM",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "https://static.thenounproject.com/png/117645-200.png",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Total Slot",
+      "message": "${tempVars(\"mentionedtotal\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Wins Counter",
+      "message": "${tempVars(\"mentionedwin\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "FirstNumber": "${tempVars(\"mentionedwin\")}",
+      "info": "3",
+      "SecondNumber": "${tempVars(\"mentionedtotal\")}",
+      "storage": "1",
+      "varName": "percent",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "${tempVars(\"percent\")}",
+      "info": "2",
+      "SecondNumber": "100",
+      "storage": "1",
+      "varName": "memberpercent",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "total-gambled",
+      "comparison": "1",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "1",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Win Percent",
+      "message": "0%\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "count": "1",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Win Percent",
+      "message": "${Math.floor(tempVars(\"memberpercent\"))}%",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "message": "Requested By: ${member.displayName}",
+      "footerIcon": "${msg.author.displayAvatarURL}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_timeRestriction": 3
+}

@@ -1,0 +1,258 @@
+{
+  "name": "cash",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "mCNnd",
+  "actions": [
+    {
+      "condition": "1",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "26",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "15",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "AuthorName",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cash",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "membercash",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "memberbank",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "12",
+      "storage": "1",
+      "varName2": "AuthorUrl",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"AuthorName\")}",
+      "color": "RANDOM",
+      "url": "",
+      "authorIcon": "${tempVars(\"AuthorUrl\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Cash",
+      "message": "${tempVars(\"membercash\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Bank",
+      "message": "${tempVars(\"memberbank\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "FirstNumber": "${tempVars(\"membercash\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"memberbank\")}",
+      "storage": "1",
+      "varName": "membertotal",
+      "name": "Basic Math Operation"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Total",
+      "message": "${tempVars(\"membertotal\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "2",
+      "iffalseVal": "29",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Mention Money",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "mentionedbank",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "cash",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "mentionedcash",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "MentionName",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "12",
+      "storage": "1",
+      "varName2": "MentionUrl",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"MentionName\")}",
+      "color": "RANDOM",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "${tempVars(\"MentionUrl\")}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Cash",
+      "message": "${tempVars(\"mentionedcash\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Bank",
+      "message": "${tempVars(\"mentionedbank\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "FirstNumber": "${tempVars(\"mentionedcash\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"mentionedbank\")}",
+      "storage": "1",
+      "varName": "mentiontotal",
+      "name": "Basic Math Operation"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "fieldName": "Total",
+      "message": "${tempVars(\"mentiontotal\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "AuthorMoney",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "2",
+      "iffalseVal": "29",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Error: I can't find this member.\nIf you mentioned two members, please mention one.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Error grabbing info",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "0",
+  "_aliases": [
+    "bal",
+    "balance"
+  ]
+}
