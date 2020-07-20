@@ -1,4 +1,7 @@
 # DBM-Economy-Remastered
+> Backstory:
+----A friend had gifted me a program called discord bot maker, he asked me "could you fix the bugs in my project?". it was an economy bot, he had these files which were all buggy, so i fixed them up and boom they are public to you now.
+
 After reviewing and remaking Blue Labels economy system, this version is pretty much errorless and includes the following
 
 1. Cash System ( Cash Board, Bank Board, Check Cash, ActivityCash )
